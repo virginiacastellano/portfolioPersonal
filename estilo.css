@@ -390,7 +390,6 @@
         /* *********************/
         /* seccion P O R T F O L I O */
         /* *********************/
-        
         #portfolio {
             max-width: 1100px;
             padding: 100px 0;
@@ -414,8 +413,7 @@
         }
         
         #portfolio .fila .proyecto {
-            max-width: 450px;
-            border: 1px solid #000;
+            flex: 1;
             margin: 0 10px;
             position: relative;
             overflow: hidden;
@@ -423,10 +421,12 @@
         
         #portfolio .fila .proyecto img {
             width: 100%;
-            height: 100%;
-            ;
-            filter: grayscale(1);
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            max-height: 250px;
             object-fit: cover;
+            filter: grayscale(1);
             transition: .5s;
         }
         
@@ -450,6 +450,7 @@
             opacity: 1;
             bottom: 0;
         }
+        
         /* *********************/
         /* seccion C O N T A C T O */
         /* *********************/
@@ -536,59 +537,71 @@
         /* *********************/
         /* seccion C O N T A C T O*/
         /* *********************/
-        .contacto{
+        .contacto {
             background-image: url(img/contact_bg.png);
             color: rgb(0, 0, 0);
-            padding: center;
-        }
-        .contacto .contenido-seccion{
-            max-width: 1000px;
-            margin: auto;
-        }
-        .contacto h2{
-            font-size: 50px;
-            font-family: 'Righteous';
-            text-align: 50px;
-            padding: 10px 0;
-        }
-    
-        .contacto .col{
-            width: 60%;
-            padding: 10px;
-            position: relative;
-        }
-        .contacto .col textarea{
-            display: block;
-            width: center;
-            padding: 18px;
-            border: none;
-            color: #fff;
-            font-size: center;
+            padding: 50px 0;
         }
         
-        .contacto .col img{
-            width: 100%;
+        .contacto .contenido-seccion {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
         }
-        .contacto .col .info{
-            position: absolute;
-            top: 50%;
-            background-color: #ca2ba8;
+        
+        .contacto h2 {
+            font-size: 50px;
+            font-family: 'Righteous', sans-serif;
+            padding: 10px 0;
+        }
+        
+        .contacto .col {
+            width: 60%;
             padding: 10px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .contacto .col .info {
+            background-color: #f82add;
+            padding: 20px;
             max-width: 350px;
-            left: 40%;
-            transform: translate(-50%, -50%);
+            margin: auto;
+            border-radius: 8px;
+            color: #fff;
         }
-        .contacto .col .info ul{
+        
+        .contacto .col .info ul {
             list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        .contacto .col .info ul li{
+        
+        .contacto .col .info ul li {
             margin-bottom: 20px;
         }
-        .contacto .col .info ul li i{
-            color: #1CB698;
+        
+        .contacto .col .info ul li i {
+            color: #4fd8bd;
             display: inline-block;
             margin-right: 20px;
         }
+        
+        .btn-contacto {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #1CB698;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        
+        .btn-contacto:hover {
+            background-color: #159b8f;
+        }
+        
        
         /* *********************/
         /* seccion R E S P O N S I V E */
